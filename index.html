@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahati Gad | ICT & Communications Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --card: #121212;
+            --accent: #38bdf8;
+            --secondary: #a855f7;
+            --whatsapp: #25d366;
+            --text: #e5e7eb;
+            --dim: #9ca3af;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; position: fixed; width: 100%; top: 0;
+            background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(12px); z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--accent); letter-spacing: -1px; }
+        .nav-links a { color: var(--text); text-decoration: none; margin-left: 25px; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 180px 8% 100px;
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 50px; min-height: 90vh;
+        }
+        .hero-content { flex: 1.2; }
+        .hero-image { flex: 0.8; display: flex; justify-content: center; }
+        
+        .img-container {
+            width: 320px; height: 320px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: linear-gradient(45deg, var(--accent), var(--secondary));
+            overflow: hidden; border: 5px solid var(--accent);
+            box-shadow: 0 0 50px rgba(56, 189, 248, 0.3);
+            animation: morph 8s ease-in-out infinite;
+        }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+
+        @keyframes morph {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        }
+
+        .hero h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; }
+        .hero p { color: var(--dim); font-size: 1.2rem; max-width: 600px; margin-bottom: 35px; }
+
+        /* --- Global Buttons --- */
+        .cta-btn {
+            display: inline-block; padding: 16px 35px; background: var(--accent); 
+            color: #000; text-decoration: none; border-radius: 12px; font-weight: 800;
+            transition: 0.3s; box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+            border: none; cursor: pointer;
+        }
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(56, 189, 248, 0.4); }
+
+        .wa-btn { background: var(--whatsapp); color: white; margin-left: 10px; }
+        .wa-btn:hover { background: #1eb954; }
+
+        /* --- Floating WhatsApp Button --- */
+        .wa-float {
+            position: fixed; bottom: 30px; right: 30px;
+            background: var(--whatsapp); color: white;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000; transition: 0.3s; text-decoration: none;
+        }
+        .wa-float:hover { transform: scale(1.1); }
+        .wa-float svg { width: 32px; height: 32px; fill: currentColor; }
+
+        /* --- Sections --- */
+        section { padding: 100px 8%; }
+        .title { font-size: 2.2rem; margin-bottom: 50px; font-weight: 800; display: flex; align-items: center; gap: 15px; }
+        .title::after { content: ''; height: 2px; flex: 1; background: rgba(255,255,255,0.1); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { 
+            background: var(--card); padding: 30px; border-radius: 20px; 
+            transition: 0.4s; border: 1px solid rgba(255,255,255,0.05);
+        }
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .tag { background: rgba(56, 189, 248, 0.1); color: var(--accent); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-family: 'JetBrains Mono'; }
+
+        /* --- Professional Footer --- */
+        footer { 
+            padding: 80px 8% 40px; background: #080808; 
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 50px; text-align: left;
+        }
+        .footer-brand h3 { color: var(--accent); margin-bottom: 15px; font-size: 1.5rem; }
+        .footer-brand p { color: var(--dim); max-width: 400px; font-size: 0.95rem; font-style: italic; }
+        .footer-links h4 { margin-bottom: 20px; font-size: 1.1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: var(--dim); text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--accent); }
+
+        .footer-bottom { 
+            padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); 
+            text-align: center; color: var(--dim); font-size: 0.8rem;
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 968px) {
+            .hero { flex-direction: column-reverse; text-align: center; padding-top: 120px; }
+            .img-container { width: 260px; height: 260px; }
+            .hero-content { display: flex; flex-direction: column; align-items: center; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+            .footer-brand p { margin: 0 auto; }
+            .nav-links { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/254791085514" class="wa-float" target="_blank" title="Chat with me on WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.52.909 3.019 1.389 4.625 1.39 5.435.001 9.859-4.423 9.862-9.859.002-2.633-1.023-5.11-2.884-6.974-1.864-1.864-4.341-2.887-6.978-2.888-5.438 0-9.862 4.423-9.865 9.86-.001 1.745.454 3.242 1.311 4.575l-.997 3.637 3.726-.977zm11.367-7.46c-.301-.15-.1.785-.412.3-.312.485-.63.163-1.177-.112-.548-.275-2.315-1.026-3.238-1.849-.714-.635-1.198-1.408-1.339-1.649-.141-.241-.015-.372.106-.492.108-.109.241-.281.361-.421.121-.14.161-.24.241-.401.081-.161.04-.301-.02-.421-.061-.121-.541-1.303-.742-1.783-.195-.471-.393-.408-.541-.415l-.462-.007c-.161 0-.421.061-.641.301s-.842.822-.842 2.005c0 1.183.862 2.326.982 2.486.121.161 1.696 2.59 4.108 3.633.573.248 1.021.396 1.37.507.575.183 1.099.157 1.513.095.461-.069 1.423-.581 1.624-1.142.201-.562.201-1.042.141-1.142-.06-.101-.221-.151-.521-.301z"/></svg>
+    </a>
+
+    <nav>
+        <div class="logo">BAHATI.GAD</div>
+        <div class="nav-links">
+            <a href="#about">Experience</a>
+            <a href="#projects">Work</a>
+            <a href="#tech">Tech</a>
+            <a href="http://www.linkedin.com/in/kulundu-gad-557aa138b" target="_blank">LinkedIn</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="tag" style="margin-bottom: 15px;">OPEN FOR GLOBAL ROLES</div>
+            <h1>Visionary <span style="color: var(--accent);">ICT</span> Manager & Strategist</h1>
+            <p>
+                I help companies scale by bridging the gap between high-level IT architecture and human-centric business management.
+            </p>
+            <div style="margin-bottom: 40px;">
+                <a href="https://wa.me/254791085514" target="_blank" class="cta-btn">Start a Conversation</a>
+                <a href="https://wa.me/254791085514" target="_blank" class="cta-btn wa-btn">WhatsApp Me</a>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <div class="img-container">
+                <img src="gpg.jpg" alt="Bahati Gad Professional Headshot">
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="title">Professional Impact</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 style="color: var(--secondary);">ICT Project Manager</h3>
+                <p style="font-size: 0.9rem; color: var(--accent); margin-bottom: 15px;">NY Presbyterian Columbia Medical Center</p>
+                <ul style="list-style: none; color: var(--dim); font-size: 0.95rem;">
+                    <li>▹ Directing $24/7$ global team coordination.</li>
+                    <li>▹ Optimized onboarding speed for technical support.</li>
+                    <li>▹ Reduced support escalations by 40% through automation.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--secondary);">Communications Officer</h3>
+                <p style="font-size: 0.9rem; color: var(--accent); margin-bottom: 15px;">New York Life Insurance Co.</p>
+                <ul style="list-style: none; color: var(--dim); font-size: 0.95rem;">
+                    <li>▹ Boosting social engagement by 60% via brand strategy.</li>
+                    <li>▹ Designing media kits for executive-level communication.</li>
+                    <li>▹ Managing remote distributed teams across time zones.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" style="background: rgba(255,255,255,0.02);">
+        <h2 class="title">The Technical Arsenal</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>Dev & Web</h4>
+                <div class="tag-cloud">
+                    <span class="tag">Java</span><span class="tag">Python</span><span class="tag">JavaScript</span>
+                    <span class="tag">Node.js</span><span class="tag">PHP</span><span class="tag">Kotlin</span>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Operations</h4>
+                <div class="tag-cloud">
+                    <span class="tag">Jira</span><span class="tag">Salesforce</span><span class="tag">CMD Scripting</span>
+                    <span class="tag">SLA Tracking</span><span class="tag">Azure</span>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Design</h4>
+                <div class="tag-cloud">
+                    <span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">Adobe Photoshop</span>
+                    <span class="tag">Graphic Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BAHATI GAD</h3>
+                <p>"I believe technology should serve people with clarity, compassion, and excellence. My mission is to build digital systems that reflect innovation and impact."</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#about">Experience</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#tech">Tech Toolbox</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:gadbahati7@gmail.com">gadbahati7@gmail.com</a></li>
+                    <li><a href="tel:+14255004486">+1 425-500-4486</a></li>
+                    <li><a href="https://wa.me/254791085514" style="color: var(--whatsapp); font-weight: 800;">Chat on WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="margin-bottom: 40px;">
+            <a href="http://www.linkedin.com/in/kulundu-gad-557aa138b" target="_blank" class="cta-btn" style="background: transparent; border: 1px solid var(--accent); color: var(--accent);">LinkedIn Profile</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bahati Gad | BBA Pace University | BSc IT NYIT</p>
+            <p style="margin-top: 5px;">Built for Innovation & Impact</p>
+        </div>
+    </footer>
+
+</body>
+</html>
