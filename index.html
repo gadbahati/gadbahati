@@ -1,21 +1,391 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gad Bahati - AI & Remote Assistant Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Gad Bahati | AI & Remote Assistant Portfolio</title>
-    <meta name="description" content="Professional portfolio of Gad Bahati - AI specialist and remote assistant for entrepreneurs. Expertise in data automation, AI workflows, and executive support." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
-  </head>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            display: inline-block;
+            margin-right: 30px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 24px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            border: none;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+        }
+
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .expertise-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .expertise-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+
+        .expertise-list li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            border-color: white;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #667eea;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .stat-box p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            nav a {
+                margin-right: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gad Bahati</h1>
+            <p>AI Specialist | Data Engineer | Remote Assistant Professional</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#about">About</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663419303226/Azo8V3u9UZDpnqRhFnntnD/gad-bahati-profile_01197c53.jpg" alt="Gad Bahati" class="profile-img">
+            <h2>Transform Your Business with AI & Automation</h2>
+            <p>Full-stack technical professional combining AI expertise, data science, and design excellence. I help organizations scale operations, automate workflows, and unlock insights through intelligent systems.</p>
+            <a href="mailto:gadbahati7@gmail.com" class="cta-button">Get In Touch</a>
+            <a href="https://wa.me/254791085514" class="cta-button">WhatsApp Me</a>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a full-stack technical professional with extensive experience in AI workflows, data automation, and executive support. With a proven track record of delivering results remotely, I specialize in:</p>
+            <ul class="expertise-list">
+                <li>Designing and implementing AI workflows and machine learning models</li>
+                <li>Creating data automation pipelines and business intelligence solutions</li>
+                <li>Managing remote operations across global teams</li>
+                <li>Providing strategic executive support and decision-making assistance</li>
+                <li>Developing full-stack applications and technical solutions</li>
+                <li>Delivering exceptional customer service and support</li>
+            </ul>
+        </section>
+
+        <section id="expertise">
+            <h2>Core Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>AI & Machine Learning</h3>
+                    <p>Advanced AI workflows, model evaluation, and intelligent automation systems designed for enterprise scale</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Science & Analytics</h3>
+                    <p>Data pipeline design, statistical analysis, and actionable business intelligence</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Full-Stack Development</h3>
+                    <p>Python, SQL, JavaScript, React, and modern web technologies</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Remote Operations</h3>
+                    <p>Multi-timezone coordination, distributed teams, and global collaboration</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Design & UX</h3>
+                    <p>Graphic design, UI/UX principles, and visual communication excellence</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Executive Support</h3>
+                    <p>Strategic decision support, research, reporting, and operational optimization</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>Programming</h3>
+                    <p>Python, JavaScript, Java, SQL, TypeScript, Go, Kotlin</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Frontend</h3>
+                    <p>React, HTML5, CSS3, Tailwind, Next.js, Vue.js</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Backend & Data</h3>
+                    <p>Node.js, PostgreSQL, MongoDB, Firebase, ETL</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Tools & Platforms</h3>
+                    <p>Git, Docker, Jira, Azure, Google Workspace, Slack</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Microsoft Office</h3>
+                    <p>Excel Advanced, Word, PowerPoint, Outlook, Teams</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Customer Support</h3>
+                    <p>Help Desk, Ticket Management, Service Excellence</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Enterprise Data Automation</h3>
+                    <p>Designed and implemented a data automation pipeline processing 5 million records daily. Reduced manual data entry by 85% and improved accuracy to 99.8%.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>AI-Powered Support Dashboard</h3>
+                    <p>Built an intelligent customer support dashboard with AI-powered ticket routing and sentiment analysis. Improved response time by 60%.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Executive BI System</h3>
+                    <p>Created a comprehensive business intelligence system providing real-time dashboards and KPI tracking for C-level executives.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Global Team Platform</h3>
+                    <p>Developed a remote collaboration platform supporting multi-timezone teams with automated scheduling and task management.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Let's Work Together</h2>
+            <p>I'm ready to help your organization achieve its goals through intelligent automation, data-driven insights, and strategic support.</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:gadbahati7@gmail.com">gadbahati7@gmail.com</a></p>
+                <p>Phone: <a href="tel:+254791085514">+254 791 085 514</a></p>
+                <p>WhatsApp: <a href="https://wa.me/254791085514">Message on WhatsApp</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/kulundu-gad-557aa138b" target="_blank">Connect on LinkedIn</a></p>
+                <p>GitHub: <a href="https://github.com/gadbahati" target="_blank">View on GitHub</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Gad Bahati. All rights reserved. | Built for innovation, excellence, and global impact</p>
+    </footer>
+</body>
 </html>
