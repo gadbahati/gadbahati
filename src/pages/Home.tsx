@@ -72,6 +72,12 @@ export default function Home() {
     { label: "Handoff workflow", title: "Developer-Ready Page Package", description: "A practical handoff format that keeps design intent intact from Figma to implementation, including responsive behavior, states, assets, and acceptance notes.", deliverables: ["Annotated responsive states", "Asset and type guidance", "Webflow and Framer-ready structure"] }
   ];
 
+  const visualLandingPages = [
+    { label: "01 / Startup one-pager", title: "Make complex work feel simple.", caption: "AI operations platform", theme: "bg-lime-200", panel: "bg-slate-950", text: "text-slate-950", button: "bg-slate-950 text-lime-200", accent: "bg-lime-300" },
+    { label: "02 / Marketing site", title: "Built for the next chapter.", caption: "Lumen — brand and growth studio", theme: "bg-indigo-950", panel: "bg-indigo-500", text: "text-white", button: "bg-amber-300 text-indigo-950", accent: "bg-amber-300" },
+    { label: "03 / Conversion page", title: "Launch with confidence.", caption: "A modern service business", theme: "bg-orange-50", panel: "bg-orange-500", text: "text-orange-950", button: "bg-orange-950 text-orange-50", accent: "bg-orange-300" }
+  ];
+
   const technicalSkills = {
     "Programming Languages": ["Python", "JavaScript", "Java", "Kotlin", "SQL", "PHP", "Bash", "C++", "TypeScript", "Go"],
     "Frontend Development": ["React", "HTML5", "CSS3", "Tailwind CSS", "Next.js", "Vue.js", "Angular", "Responsive Design", "Web Components"],
@@ -231,46 +237,49 @@ export default function Home() {
               <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition">Testimonials</a>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition">Contact</a>
             </div>
+            <a href="#web-design" className="md:hidden text-sm font-semibold text-blue-600">See work ↓</a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-gray-50 to-white">
+      <section className="relative overflow-hidden py-24 px-4 sm:px-6 lg:px-8 bg-slate-950">
+        <div className="absolute -right-24 -top-32 w-96 h-96 rounded-full bg-blue-500/20 blur-3xl" />
+        <div className="absolute left-1/3 bottom-0 w-72 h-40 rounded-full bg-amber-300/10 blur-3xl" />
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="inline-block px-4 py-2 bg-blue-50 border border-blue-300 rounded-full">
-                <span className="text-blue-700 text-sm font-semibold">Web Designer, UI Specialist, AI and Data Professional</span>
+              <div className="inline-block px-4 py-2 bg-white/10 border border-white/15 rounded-full">
+                <span className="text-amber-300 text-sm font-semibold">Web Designer · UI Specialist · Technical Professional</span>
               </div>
-              <h2 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
-                Design Digital Experiences That <span className="text-blue-600">Move People to Act</span>
+              <h2 className="text-5xl md:text-6xl font-bold leading-[0.98] text-white tracking-tight">
+                Design digital experiences that <span className="text-amber-300">move people to act.</span>
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-slate-300 leading-relaxed max-w-xl">
                 I combine responsive web design, visual communication, and technical implementation to create landing pages, marketing sites, and startup one-pagers that are clear, consistent, and ready to build.
               </p>
               <div className="flex flex-wrap gap-3">
-                <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Responsive layouts</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Figma and design systems</span>
-                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Conversion-focused UX</span>
-                <span className="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Developer handoff</span>
+                <span className="px-3 py-1 bg-white/10 text-slate-200 border border-white/10 rounded-full text-sm font-medium">Responsive layouts</span>
+                <span className="px-3 py-1 bg-white/10 text-slate-200 border border-white/10 rounded-full text-sm font-medium">Figma and design systems</span>
+                <span className="px-3 py-1 bg-white/10 text-slate-200 border border-white/10 rounded-full text-sm font-medium">Conversion-focused UX</span>
+                <span className="px-3 py-1 bg-white/10 text-slate-200 border border-white/10 rounded-full text-sm font-medium">Developer handoff</span>
               </div>
               <div className="flex gap-4 pt-4">
-                <a href="mailto:gadbahati7@gmail.com" className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition transform hover:scale-105">
-                  Get In Touch
+                <a href="#web-design" className="px-6 py-3 bg-amber-300 text-slate-950 font-semibold rounded-lg hover:bg-amber-200 transition transform hover:scale-105">
+                  See landing pages
                 </a>
-                <a href="#projects" className="px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition">
-                  View Projects
+                <a href="mailto:gadbahati7@gmail.com" className="px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition">
+                  Get In Touch
                 </a>
               </div>
             </div>
             <div className="flex justify-center">
               <div className="relative w-80 h-80">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-300 to-blue-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
                 <img 
                   src={profileImage} 
                   alt="Gad Bahati" 
-                  className="relative w-full h-full rounded-full object-cover border-4 border-blue-600 shadow-lg hover:scale-105 transition duration-300"
+                  className="relative w-full h-full rounded-full object-cover border-8 border-white/20 shadow-2xl hover:scale-105 transition duration-300"
                 />
               </div>
             </div>
@@ -279,12 +288,45 @@ export default function Home() {
       </section>
 
       {/* Web Design Portfolio Focus */}
-      <section id="web-design" className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/60">
+      <section id="web-design" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#f3f6fb]">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl mb-12">
-            <p className="text-blue-600 font-semibold uppercase tracking-wider text-sm mb-3">Web design portfolio focus</p>
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">Landing pages built for clarity, consistency, and conversion</h2>
-            <p className="text-gray-700 text-lg leading-relaxed">This portfolio brings together design thinking and front-end execution: from the first responsive frame in Figma to a polished handoff that a developer, Webflow builder, or Framer creator can use confidently.</p>
+            <p className="text-blue-600 font-semibold uppercase tracking-[0.18em] text-xs mb-3">Selected web design work</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 tracking-tight">Landing pages are the portfolio.</h2>
+            <p className="text-gray-700 text-lg leading-relaxed">A visual collection of startup one-pagers, marketing directions, and conversion-led page systems—designed responsively and prepared for Figma-to-build handoff.</p>
+          </div>
+          <div className="grid lg:grid-cols-3 gap-7 mb-16">
+            {visualLandingPages.map((page, idx) => (
+              <article key={idx} className="group">
+                <div className={`rounded-[1.35rem] ${page.panel} p-3 shadow-xl transition duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl`}>
+                  <div className="flex items-center gap-1.5 px-2 pb-3">
+                    <span className="w-2 h-2 rounded-full bg-red-300" />
+                    <span className="w-2 h-2 rounded-full bg-yellow-300" />
+                    <span className="w-2 h-2 rounded-full bg-green-300" />
+                    <span className="ml-auto text-[9px] text-white/50 tracking-wider">LIVE PREVIEW</span>
+                  </div>
+                  <div className={`min-h-[310px] rounded-xl ${page.theme} ${page.text} p-6 sm:p-8 flex flex-col justify-between overflow-hidden relative`}>
+                    <div className="absolute -right-10 -top-10 w-36 h-36 rounded-full border-[18px] border-white/20" />
+                    <div className="relative">
+                      <div className="flex justify-between items-center mb-10">
+                        <span className="font-bold text-xs tracking-[0.18em] uppercase">{page.caption}</span>
+                        <span className={`w-7 h-7 rounded-full ${page.accent} flex items-center justify-center text-xs`}>↗</span>
+                      </div>
+                      <p className="text-[10px] uppercase tracking-[0.2em] opacity-60 mb-4">{page.label}</p>
+                      <h3 className="text-3xl sm:text-4xl font-black leading-[0.95] max-w-[10ch] tracking-tight">{page.title}</h3>
+                    </div>
+                    <div className="relative flex items-end justify-between gap-4 mt-8">
+                      <a href="#contact" className={`rounded-full px-4 py-2 text-xs font-bold ${page.button}`}>Start a project</a>
+                      <span className="text-[10px] font-semibold opacity-60">Scroll to explore ↓</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between mt-4 px-1">
+                  <span className="text-sm font-semibold text-gray-900">{page.title}</span>
+                  <span className="text-xs text-blue-600 font-medium">Responsive concept</span>
+                </div>
+              </article>
+            ))}
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {webDesignCapabilities.map((item, idx) => (
