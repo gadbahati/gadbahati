@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import profileImageAsset from "../../gpg.jpg";
 import { Mail, Phone, ExternalLink, Github, Linkedin, CheckCircle2, Zap, Brain, Globe, Code2, Database, Palette, BarChart3, Cpu, Cloud, Award, Download, Star, Quote } from "lucide-react";
 
 /**
@@ -13,7 +14,7 @@ import { Mail, Phone, ExternalLink, Github, Linkedin, CheckCircle2, Zap, Brain, 
  */
 
 export default function Home() {
-  const profileImage = "https://d2xsxph8kpxj0f.cloudfront.net/310519663419303226/Azo8V3u9UZDpnqRhFnntnD/gad-bahati-profile_01197c53.jpg";
+  const profileImage = profileImageAsset;
 
   const coreExpertise = [
     {
