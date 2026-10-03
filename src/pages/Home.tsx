@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import profileImageAsset from "../../gpg.jpg";
-import { Mail, Phone, ExternalLink, Github, Linkedin, CheckCircle2, Zap, Brain, Globe, Code2, Database, Palette, BarChart3, Cpu, Cloud, Award, Download, Star, Quote } from "lucide-react";
+import { Mail, Phone, ExternalLink, Github, Linkedin, CheckCircle2, Zap, Brain, Globe, Code2, Database, Palette, BarChart3, Cpu, Cloud, Award, Download, Star, Quote, LayoutTemplate, MousePointer2, Layers3, FileOutput } from "lucide-react";
 
 /**
  * Design Philosophy: Professional Tech Portfolio
@@ -57,6 +57,19 @@ export default function Home() {
       title: "Customer Service and Support",
       description: "Professional customer support, issue resolution, and service excellence with focus on satisfaction"
     }
+  ];
+
+  const webDesignCapabilities = [
+    { icon: <LayoutTemplate className="w-6 h-6" />, title: "Landing Pages and Marketing Sites", description: "Clear information architecture, persuasive messaging, and responsive layouts built to guide visitors toward one focused action." },
+    { icon: <Layers3 className="w-6 h-6" />, title: "Figma Systems and Components", description: "Auto-layout thinking, reusable components, type scales, color tokens, and practical design-system foundations for consistent work." },
+    { icon: <MousePointer2 className="w-6 h-6" />, title: "Conversion-Focused UX", description: "Hero sections, trust signals, benefit-led content, social proof, and calls to action arranged around user intent and clarity." },
+    { icon: <FileOutput className="w-6 h-6" />, title: "Production-Ready Handoff", description: "Organized specifications, responsive states, asset guidance, and developer-friendly documentation for code, Webflow, or Framer builds." }
+  ];
+
+  const designCaseStudies = [
+    { label: "Landing page concept", title: "AI Operations Launch Page", description: "A focused startup one-pager for an AI operations product, moving from a clear value proposition to proof, benefits, and a strong demo CTA.", deliverables: ["Responsive desktop and mobile layouts", "Conversion hierarchy", "CTA and trust-section patterns"] },
+    { label: "Marketing site system", title: "Professional Services Website", description: "A reusable visual direction for a professional service brand with consistent sections that can scale across home, services, case studies, and contact pages.", deliverables: ["Design tokens and component logic", "Page-to-page consistency", "Content and visual hierarchy"] },
+    { label: "Handoff workflow", title: "Developer-Ready Page Package", description: "A practical handoff format that keeps design intent intact from Figma to implementation, including responsive behavior, states, assets, and acceptance notes.", deliverables: ["Annotated responsive states", "Asset and type guidance", "Webflow and Framer-ready structure"] }
   ];
 
   const technicalSkills = {
@@ -211,6 +224,7 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold text-blue-600">GAD BAHATI</h1>
             <div className="hidden md:flex gap-8">
+              <a href="#web-design" className="text-gray-700 hover:text-blue-600 transition">Web Design</a>
               <a href="#expertise" className="text-gray-700 hover:text-blue-600 transition">Expertise</a>
               <a href="#skills" className="text-gray-700 hover:text-blue-600 transition">Skills</a>
               <a href="#projects" className="text-gray-700 hover:text-blue-600 transition">Projects</a>
@@ -227,19 +241,19 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="inline-block px-4 py-2 bg-blue-50 border border-blue-300 rounded-full">
-                <span className="text-blue-700 text-sm font-semibold">AI Specialist, Data Engineer, Tech Professional</span>
+                <span className="text-blue-700 text-sm font-semibold">Web Designer, UI Specialist, AI and Data Professional</span>
               </div>
               <h2 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
-                Transform Your <span className="text-blue-600">Business with AI</span>
+                Design Digital Experiences That <span className="text-blue-600">Move People to Act</span>
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                I am a full-stack technical professional combining AI expertise, data science, and design excellence. I help organizations scale operations, automate workflows, and unlock insights through intelligent systems and strategic support.
+                I combine responsive web design, visual communication, and technical implementation to create landing pages, marketing sites, and startup one-pagers that are clear, consistent, and ready to build.
               </p>
               <div className="flex flex-wrap gap-3">
-                <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python and SQL</span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">AI and Machine Learning</span>
-                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Data Science</span>
-                <span className="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Design and Development</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Responsive layouts</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Figma and design systems</span>
+                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Conversion-focused UX</span>
+                <span className="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Developer handoff</span>
               </div>
               <div className="flex gap-4 pt-4">
                 <a href="mailto:gadbahati7@gmail.com" className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition transform hover:scale-105">
@@ -260,6 +274,43 @@ export default function Home() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Web Design Portfolio Focus */}
+      <section id="web-design" className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50/60">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mb-12">
+            <p className="text-blue-600 font-semibold uppercase tracking-wider text-sm mb-3">Web design portfolio focus</p>
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Landing pages built for clarity, consistency, and conversion</h2>
+            <p className="text-gray-700 text-lg leading-relaxed">This portfolio brings together design thinking and front-end execution: from the first responsive frame in Figma to a polished handoff that a developer, Webflow builder, or Framer creator can use confidently.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {webDesignCapabilities.map((item, idx) => (
+              <Card key={idx} className="bg-white border-blue-100 hover:border-blue-300 hover:shadow-md transition p-6">
+                <div className="text-blue-600 mb-4">{item.icon}</div>
+                <h3 className="text-lg font-bold mb-2 text-gray-900">{item.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+              </Card>
+            ))}
+          </div>
+          <div className="grid lg:grid-cols-3 gap-6">
+            {designCaseStudies.map((study, idx) => (
+              <Card key={idx} className="bg-white border-gray-200 p-7 shadow-sm hover:shadow-md hover:border-blue-300 transition">
+                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600">{study.label}</span>
+                <h3 className="text-xl font-bold text-gray-900 mt-3 mb-3">{study.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-5">{study.description}</p>
+                <ul className="space-y-2">
+                  {study.deliverables.map((deliverable, deliverableIdx) => (
+                    <li key={deliverableIdx} className="flex gap-2 text-sm text-gray-700">
+                      <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span>{deliverable}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -481,6 +532,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Role Fit */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-blue-600 font-semibold uppercase tracking-wider text-sm mb-3">How I work</p>
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">A reliable partner for remote design projects</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">Self-directed, detail-oriented, and comfortable taking a brief from concept to an organized, production-ready result.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-white border-gray-200 p-7 shadow-sm">
+              <h3 className="text-xl font-bold text-blue-600 mb-3">Remote and part-time ready</h3>
+              <p className="text-gray-700 leading-relaxed">Available for focused project phases and flexible collaboration of approximately 10–20 hours per week when active work is scheduled.</p>
+            </Card>
+            <Card className="bg-white border-gray-200 p-7 shadow-sm">
+              <h3 className="text-xl font-bold text-blue-600 mb-3">Clear English communication</h3>
+              <p className="text-gray-700 leading-relaxed">Professional written and verbal English for briefs, design rationale, async updates, stakeholder feedback, and handoff documentation.</p>
+            </Card>
+            <Card className="bg-white border-gray-200 p-7 shadow-sm">
+              <h3 className="text-xl font-bold text-blue-600 mb-3">Consistent across formats</h3>
+              <p className="text-gray-700 leading-relaxed">A single visual language carried through web pages, PDFs, presentations, social materials, and the implementation layer.</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
@@ -510,6 +586,7 @@ export default function Home() {
             <div>
               <h4 className="text-white font-bold mb-4">Navigation</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
+                <li><a href="#web-design" className="hover:text-blue-400 transition">Web Design</a></li>
                 <li><a href="#expertise" className="hover:text-blue-400 transition">Expertise</a></li>
                 <li><a href="#skills" className="hover:text-blue-400 transition">Skills</a></li>
                 <li><a href="#projects" className="hover:text-blue-400 transition">Projects</a></li>
