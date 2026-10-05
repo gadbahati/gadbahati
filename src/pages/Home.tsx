@@ -74,7 +74,7 @@ export default function Home() {
 
   const visualLandingPages = [
     { label: "01 / Startup one-pager", title: "Make complex work feel simple.", caption: "AI operations platform", theme: "bg-lime-200", panel: "bg-slate-950", text: "text-slate-950", button: "bg-slate-950 text-lime-200", accent: "bg-lime-300" },
-    { label: "02 / Marketing site", title: "Built for the next chapter.", caption: "Lumen — brand and growth studio", theme: "bg-indigo-950", panel: "bg-indigo-500", text: "text-white", button: "bg-amber-300 text-indigo-950", accent: "bg-amber-300" },
+    { label: "02 / Marketing site", title: "Built for the next chapter.", caption: "Lumen — brand and growth studio", theme: "bg-indigo-950", panel: "bg-indigo-500", text: "text-white", button: "bg-white text-indigo-950", accent: "bg-slate-200" },
     { label: "03 / Conversion page", title: "Launch with confidence.", caption: "A modern service business", theme: "bg-orange-50", panel: "bg-orange-500", text: "text-orange-950", button: "bg-orange-950 text-orange-50", accent: "bg-orange-300" }
   ];
 
@@ -259,23 +259,23 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="inline-block px-4 py-2 bg-white/10 border border-white/15 rounded-full">
-                <span className="text-amber-300 text-sm font-semibold">Web Designer · UI Specialist · Technical Professional</span>
+              <div className="inline-block border-b border-slate-500 pb-2">
+                <span className="text-slate-300 text-sm font-medium">Web designer · UI specialist · technical professional</span>
               </div>
               <h2 className="text-5xl md:text-6xl font-bold leading-[0.98] text-white tracking-tight">
-                Design digital experiences that <span className="text-amber-300">move people to act.</span>
+                Design digital experiences that <span className="underline decoration-2 underline-offset-8">move people to act.</span>
               </h2>
               <p className="text-lg text-slate-300 leading-relaxed max-w-xl">
                 I combine responsive web design, visual communication, and technical implementation to create landing pages, marketing sites, and startup one-pagers that are clear, consistent, and ready to build.
               </p>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-3 py-1 bg-white/10 text-slate-200 border border-white/10 rounded-full text-sm font-medium">Responsive layouts</span>
-                <span className="px-3 py-1 bg-white/10 text-slate-200 border border-white/10 rounded-full text-sm font-medium">Figma and design systems</span>
-                <span className="px-3 py-1 bg-white/10 text-slate-200 border border-white/10 rounded-full text-sm font-medium">Conversion-focused UX</span>
-                <span className="px-3 py-1 bg-white/10 text-slate-200 border border-white/10 rounded-full text-sm font-medium">Developer handoff</span>
+              <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-300">
+                <span>Responsive layouts</span>
+                <span>Figma and design systems</span>
+                <span>Conversion-focused UX</span>
+                <span>Developer handoff</span>
               </div>
               <div className="flex gap-4 pt-4">
-                <a href="#web-design" className="px-6 py-3 bg-amber-300 text-slate-950 font-semibold rounded-lg hover:bg-amber-200 transition transform hover:scale-105">
+                <a href="#web-design" className="px-6 py-3 bg-white text-slate-950 font-semibold rounded-md hover:bg-slate-200 transition">
                   See landing pages
                 </a>
                 <a href="mailto:gadbahati7@gmail.com" className="px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition">
@@ -310,7 +310,7 @@ export default function Home() {
                 <div className={`rounded-[1.35rem] ${page.panel} p-3 shadow-xl transition duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl`}>
                   <div className="flex items-center gap-1.5 px-2 pb-3">
                     <span className="w-2 h-2 rounded-full bg-red-300" />
-                    <span className="w-2 h-2 rounded-full bg-yellow-300" />
+                    <span className="w-2 h-2 rounded-full bg-slate-300" />
                     <span className="w-2 h-2 rounded-full bg-green-300" />
                     <span className="ml-auto text-[9px] text-white/50 tracking-wider">LIVE PREVIEW</span>
                   </div>
