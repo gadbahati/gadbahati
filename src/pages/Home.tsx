@@ -78,6 +78,17 @@ export default function Home() {
     { label: "03 / Conversion page", title: "Launch with confidence.", caption: "A modern service business", theme: "bg-orange-50", panel: "bg-orange-500", text: "text-orange-950", button: "bg-orange-950 text-orange-50", accent: "bg-orange-300" }
   ];
 
+  const otherWebsites = [
+    { title: "Workly AI", type: "AI tools and productivity", description: "A bright product landing page for practical AI tools.", url: "https://worklyai-taupe.vercel.app", image: "/site-thumbnails/workly-ai.jpg", repo: "MONEY-GENARATOR" },
+    { title: "Global Opportunity Hub", type: "Jobs and opportunities", description: "A clear, approachable platform for finding global work opportunities.", url: "https://canadaopportunityhub.vercel.app", image: "/site-thumbnails/canada-opportunity-hub.jpg", repo: "canadaopportunityhub" },
+    { title: "Phone Master", type: "Product landing page", description: "A simple welcome page for a phone and device support product.", url: "https://phone-master-seven.vercel.app", image: "/site-thumbnails/phone-master.jpg", repo: "Phone-Master" },
+    { title: "Charstine EcoTourist Resort", type: "Hospitality website", description: "An eco-luxury resort website with a strong visual first impression.", url: "https://charstineecotouristresort.vercel.app", image: "/site-thumbnails/charstine-eco.jpg", repo: "Charstine" },
+    { title: "Vivian Naswa Sifuna", type: "Personal brand website", description: "A professional profile site for a public communications strategist.", url: "https://viviansifuna.vercel.app", image: "/site-thumbnails/vivian-sifuna.jpg", repo: "viviansifuna" },
+    { title: "King Jesus Ministry Kenya", type: "Church website", description: "A calm, information-led website for a ministry and its community.", url: "https://king-jesus-ministry-ke.vercel.app", image: "/site-thumbnails/king-jesus-ministry.jpg", repo: "King-Jesus-Ministry-KE" },
+    { title: "King Jesus Ministry — alternate build", type: "Community website", description: "A second published version of the ministry website with the same core content.", url: "https://kingjesusministrykenya.vercel.app", image: "/site-thumbnails/kingjesus-ministry-alt.jpg", repo: "Kingjesusministrykenya" },
+    { title: "Charstine Royal Eco-Luxury", type: "Hospitality website", description: "A second resort direction with a more dramatic, premium visual style.", url: "https://charstineecoluxury.vercel.app", image: "/site-thumbnails/charstine-luxury.jpg", repo: "charstineecoluxury" }
+  ];
+
   const technicalSkills = {
     "Programming Languages": ["Python", "JavaScript", "Java", "Kotlin", "SQL", "PHP", "Bash", "C++", "TypeScript", "Go"],
     "Frontend Development": ["React", "HTML5", "CSS3", "Tailwind CSS", "Next.js", "Vue.js", "Angular", "Responsive Design", "Web Components"],
@@ -232,6 +243,7 @@ export default function Home() {
             <div className="hidden md:flex gap-8">
               <a href="#web-design" className="text-gray-700 hover:text-blue-600 transition">Web Design</a>
               <a href="#expertise" className="text-gray-700 hover:text-blue-600 transition">Expertise</a>
+              <a href="#other-websites" className="text-gray-700 hover:text-blue-600 transition">Other sites</a>
               <a href="#skills" className="text-gray-700 hover:text-blue-600 transition">Skills</a>
               <a href="#projects" className="text-gray-700 hover:text-blue-600 transition">Projects</a>
               <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition">Testimonials</a>
@@ -352,6 +364,38 @@ export default function Home() {
                   ))}
                 </ul>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Other Websites */}
+      <section id="other-websites" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+            <div className="max-w-2xl">
+              <p className="text-blue-600 font-semibold uppercase tracking-[0.18em] text-xs mb-3">More work</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 tracking-tight">Other websites by Gad Bahati</h2>
+              <p className="text-gray-600 text-lg leading-relaxed">A selection of live websites from my GitHub projects. Open any card to visit the published site.</p>
+            </div>
+            <p className="text-sm text-gray-500 md:text-right">Live links checked October 2026</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {otherWebsites.map((site) => (
+              <a key={site.url} href={site.url} target="_blank" rel="noopener noreferrer" className="group block rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-lg transition duration-200">
+                <div className="aspect-video bg-gray-100 overflow-hidden">
+                  <img src={site.image} alt={`${site.title} website thumbnail`} className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition duration-300" />
+                </div>
+                <div className="p-5">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">{site.type}</p>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{site.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">{site.description}</p>
+                  <div className="flex items-center justify-between gap-3 text-xs">
+                    <span className="text-gray-500">GitHub: {site.repo}</span>
+                    <span className="font-semibold text-blue-600">Visit site</span>
+                  </div>
+                </div>
+              </a>
             ))}
           </div>
         </div>
@@ -626,6 +670,7 @@ export default function Home() {
               <h4 className="text-white font-bold mb-4">Navigation</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li><a href="#web-design" className="hover:text-blue-400 transition">Web Design</a></li>
+                <li><a href="#other-websites" className="hover:text-blue-400 transition">Other websites</a></li>
                 <li><a href="#expertise" className="hover:text-blue-400 transition">Expertise</a></li>
                 <li><a href="#skills" className="hover:text-blue-400 transition">Skills</a></li>
                 <li><a href="#projects" className="hover:text-blue-400 transition">Projects</a></li>
