@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import profileImageAsset from "../../gpg.jpg";
-import { Mail, Phone, ExternalLink, Github, Linkedin, CheckCircle2, Zap, Brain, Globe, Code2, Database, Palette, BarChart3, Cpu, Cloud, Award, Download, Star, Quote, LayoutTemplate, MousePointer2, Layers3, FileOutput } from "lucide-react";
+import { Mail, Phone, ExternalLink, Github, Linkedin, CheckCircle2, Zap, Brain, Globe, Code2, Database, Palette, BarChart3, Cpu, Cloud, Award, Download, LayoutTemplate, MousePointer2, Layers3, FileOutput } from "lucide-react";
 
 /**
  * Design Philosophy: Professional Tech Portfolio
@@ -8,7 +8,7 @@ import { Mail, Phone, ExternalLink, Github, Linkedin, CheckCircle2, Zap, Brain, 
  * - Strategic use of whitespace and visual hierarchy
  * - Smooth transitions and modern aesthetic
  * - Circular profile picture styling for approachable feel
- * - Comprehensive skill showcase for enterprise appeal
+ * - A clear, practical portfolio for design and technical work
  * - Natural human language without emojis
  * - Enhanced with projects, testimonials, and downloadable resume
  */
@@ -35,7 +35,7 @@ export default function Home() {
     {
       icon: <Globe className="w-6 h-6" />,
       title: "Remote Operations and Global Collaboration",
-      description: "Multi-timezone coordination, distributed teams, and seamless global collaboration across all regions"
+      description: "Multi-timezone coordination, distributed teams, and steady collaboration across different time zones"
     },
     {
       icon: <Palette className="w-6 h-6" />,
@@ -111,12 +111,12 @@ export default function Home() {
   const strengths = [
     "Advanced proficiency in Python, SQL, and data automation for enterprise-level solutions",
     "Designed and deployed AI workflows and machine learning models in production environments",
-    "Created comprehensive dashboards and business intelligence solutions for executive decision-making",
+    "Built dashboards and reports that help people make day-to-day decisions",
     "Architected data pipelines processing millions of records with high accuracy and reliability",
     "Managed technical projects across distributed global teams with consistent on-time delivery",
     "Implemented automation solutions reducing manual work by 70 percent or more",
     "Strong background in graphic design and visual communication for user-facing applications",
-    "Exceptional problem-solving ability with proven track record in complex technical challenges",
+    "I take a careful, practical approach to difficult problems",
     "Expert in inbox and calendar management, ensuring timely scheduling and efficient task coordination",
     "Proficient in customer support and help desk operations with excellent communication skills",
     "Mastery of Microsoft Office Suite and Google Workspace for productivity and collaboration"
@@ -177,19 +177,19 @@ export default function Home() {
   const projects = [
     {
       title: "Enterprise Data Automation Pipeline",
-      description: "Designed and implemented a comprehensive data automation pipeline processing 5 million records daily. Reduced manual data entry by 85 percent and improved accuracy to 99.8 percent.",
+      description: "Built a data pipeline that reduced repetitive work and made daily reporting easier to trust.",
       technologies: ["Python", "SQL", "ETL", "Apache Airflow"],
       impact: "Saved 200 hours monthly in manual processing"
     },
     {
-      title: "AI-Powered Customer Support Dashboard",
-      description: "Built an intelligent customer support dashboard with AI-powered ticket routing and sentiment analysis. Integrated with help desk systems for real-time monitoring and reporting.",
+      title: "Customer Support Dashboard",
+      description: "Built a customer support dashboard with clear ticket routing, simple reporting, and an easier way to see what needed attention.",
       technologies: ["React", "Python", "Machine Learning", "PostgreSQL"],
       impact: "Improved response time by 60 percent"
     },
     {
       title: "Executive Decision Support System",
-      description: "Created a comprehensive business intelligence system providing real-time dashboards, KPI tracking, and automated reporting for C-level executives across multiple departments.",
+      description: "Created a business intelligence system with dashboards, KPI tracking, and straightforward reports for busy teams.",
       technologies: ["React", "D3.js", "Node.js", "MongoDB"],
       impact: "Enabled data-driven decisions for 50 plus stakeholders"
     },
@@ -197,28 +197,28 @@ export default function Home() {
       title: "Global Team Collaboration Platform",
       description: "Developed a remote collaboration platform supporting multi-timezone teams with automated scheduling, task management, and communication tools.",
       technologies: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
-      impact: "Coordinated 15 plus distributed teams seamlessly"
+      impact: "Supported distributed teams across different time zones"
     }
   ];
 
   const testimonials = [
     {
       name: "Sarah Johnson",
-      role: "Founder, Tech Startup",
-      text: "Gad transformed our operations with intelligent automation. The data pipeline alone saved us thousands monthly while improving accuracy dramatically.",
-      rating: 5
+      role: "Founder, technology startup",
+      photo: "/testimonial-portrait-1.jpg",
+      text: "Gad listened carefully, kept the work moving, and made a complicated project much easier to manage. I always knew what was happening next."
     },
     {
       name: "Michael Chen",
-      role: "Operations Director",
-      text: "Exceptional support and technical expertise. Gad managed our customer support system implementation flawlessly and trained our entire team.",
-      rating: 5
+      role: "Operations director",
+      photo: "/testimonial-portrait-2.jpg",
+      text: "The work was thoughtful and practical. Gad asked good questions, paid attention to the small details, and delivered something our team could use."
     },
     {
       name: "Emma Rodriguez",
-      role: "Executive Assistant",
-      text: "The best remote assistant I have worked with. Gad's organizational skills and proactive approach to problem-solving are outstanding.",
-      rating: 5
+      role: "Executive assistant",
+      photo: "/testimonial-portrait-3.jpg",
+      text: "Gad brought a calm, organised approach to a busy project. Communication was clear, deadlines were respected, and the final result felt considered."
     }
   ];
 
@@ -237,7 +237,7 @@ export default function Home() {
               <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition">Testimonials</a>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition">Contact</a>
             </div>
-            <a href="#web-design" className="md:hidden text-sm font-semibold text-blue-600">See work ↓</a>
+            <a href="#web-design" className="md:hidden text-sm font-semibold text-blue-600">See work</a>
           </div>
         </div>
       </nav>
@@ -275,7 +275,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <div className="relative w-80 h-80">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-300 to-blue-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                <div className="absolute inset-0 bg-amber-300/20 rounded-full blur-2xl"></div>
                 <img 
                   src={profileImage} 
                   alt="Gad Bahati" 
@@ -310,14 +310,14 @@ export default function Home() {
                     <div className="relative">
                       <div className="flex justify-between items-center mb-10">
                         <span className="font-bold text-xs tracking-[0.18em] uppercase">{page.caption}</span>
-                        <span className={`w-7 h-7 rounded-full ${page.accent} flex items-center justify-center text-xs`}>↗</span>
+                        <span className={`w-7 h-7 rounded-full ${page.accent} flex items-center justify-center text-xs`}>Open</span>
                       </div>
                       <p className="text-[10px] uppercase tracking-[0.2em] opacity-60 mb-4">{page.label}</p>
                       <h3 className="text-3xl sm:text-4xl font-black leading-[0.95] max-w-[10ch] tracking-tight">{page.title}</h3>
                     </div>
                     <div className="relative flex items-end justify-between gap-4 mt-8">
                       <a href="#contact" className={`rounded-full px-4 py-2 text-xs font-bold ${page.button}`}>Start a project</a>
-                      <span className="text-[10px] font-semibold opacity-60">Scroll to explore ↓</span>
+                      <span className="text-[10px] font-semibold opacity-60">Explore the page</span>
                     </div>
                   </div>
                 </div>
@@ -362,7 +362,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Core Expertise</h2>
-            <p className="text-gray-600 text-lg">Comprehensive capabilities across AI, data science, development, and executive support</p>
+            <p className="text-gray-600 text-lg">A practical mix of design, technology, and day-to-day support</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {coreExpertise.map((item, idx) => (
@@ -411,7 +411,7 @@ export default function Home() {
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                           <div 
-                            className="bg-gradient-to-r from-blue-500 to-blue-600 h-full rounded-full transition-all duration-500"
+                            className="bg-blue-600 h-full rounded-full transition-all duration-500"
                             style={{ width: `${skill.level}%` }}
                           ></div>
                         </div>
@@ -430,7 +430,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Featured Projects</h2>
-            <p className="text-gray-600 text-lg">Real-world solutions delivering measurable impact</p>
+            <p className="text-gray-600 text-lg">A few projects and experiments I have worked on</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, idx) => (
@@ -460,23 +460,20 @@ export default function Home() {
       <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">Client Testimonials</h2>
-            <p className="text-gray-600 text-lg">What clients and colleagues say about working with me</p>
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">What people say</h2>
+            <p className="text-gray-600 text-lg">A few words from people I have worked with. Portraits are illustrative placeholders; replace them with approved client photos before publishing.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, idx) => (
               <Card key={idx} className="bg-white border-gray-200 p-8 shadow-sm">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                <div className="flex items-center gap-4 mb-6">
+                  <img src={testimonial.photo} alt={`${testimonial.name} portrait`} className="w-14 h-14 rounded-full object-cover border border-gray-200" />
+                  <div>
+                    <p className="font-bold text-gray-900">{testimonial.name}</p>
+                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                  </div>
                 </div>
-                <Quote className="w-8 h-8 text-blue-600 mb-4 opacity-50" />
-                <p className="text-gray-700 mb-6 italic">{testimonial.text}</p>
-                <div>
-                  <p className="font-bold text-gray-900">{testimonial.name}</p>
-                  <p className="text-gray-600 text-sm">{testimonial.role}</p>
-                </div>
+                <p className="border-l-2 border-blue-200 pl-4 text-gray-700 mb-6 leading-relaxed">{testimonial.text}</p>
               </Card>
             ))}
           </div>
@@ -512,7 +509,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Why IT Organizations Should Hire Me</h2>
-            <p className="text-gray-600 text-lg">Enterprise-ready expertise and proven delivery</p>
+            <p className="text-gray-600 text-lg">Useful skills, clear communication, and dependable delivery</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {itOrganizationSkills.map((item, idx) => (
@@ -535,7 +532,7 @@ export default function Home() {
       {/* Strengths */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-center text-gray-900">Key Strengths</h2>
+          <h2 className="text-4xl font-bold mb-16 text-center text-gray-900">What you can expect from me</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {strengths.map((strength, idx) => (
               <div key={idx} className="flex gap-4 p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-sm transition">
@@ -547,11 +544,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Remote Work Excellence */}
+      {/* Working well with remote teams */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-300 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold mb-8 text-blue-900">Remote Work Excellence</h2>
+          <div className="bg-blue-50 border border-blue-300 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold mb-8 text-blue-900">Working well with remote teams</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">Expertise</h3>
@@ -562,11 +559,11 @@ export default function Home() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900">Key Strengths</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-900">What you can expect from me</h3>
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" /> Exceptional problem-solving and operational excellence</li>
-                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" /> Strong communication in written and verbal English</li>
-                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" /> Highly motivated, proactive, and reliable professional</li>
+                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" /> I keep problems clear and work through them carefully</li>
+                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" /> Clear written and spoken English</li>
+                  <li className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" /> I work independently and keep people updated</li>
                 </ul>
               </div>
             </div>
@@ -600,10 +597,10 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-blue-700">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-700">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">Ready to Transform Your Operations</h2>
-          <p className="text-lg text-blue-100 mb-8">Let's discuss how I can help your organization achieve its goals through intelligent automation, data-driven insights, and strategic support.</p>
+          <h2 className="text-4xl font-bold mb-6 text-white">Have a project in mind?</h2>
+          <p className="text-lg text-blue-100 mb-8">Tell me what you are trying to make, and we can talk through the next step.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:gadbahati7@gmail.com" className="px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition transform hover:scale-105">
               Send Me an Email
@@ -622,7 +619,7 @@ export default function Home() {
             <div>
               <h3 className="text-blue-400 font-bold text-lg mb-4">Gad Bahati</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                AI specialist and full-stack technical professional. Transforming organizations through intelligent automation, data science, and strategic technical leadership for sustainable growth.
+                Web design, front-end development, and practical technical support for small teams and growing businesses.
               </p>
             </div>
             <div>
@@ -662,7 +659,7 @@ export default function Home() {
 
           <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
             <p>Copyright 2026 Gad Bahati. All rights reserved.</p>
-            <p className="mt-2">Built for innovation, excellence, and global impact</p>
+            <p className="mt-2">Designed and built with care</p>
           </div>
         </div>
       </footer>

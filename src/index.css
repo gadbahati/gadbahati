@@ -8,7 +8,7 @@
 
   body {
     @apply bg-white text-gray-900 font-sans;
-    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    background: #ffffff;
   }
 
   * {
@@ -38,7 +38,7 @@
   /* Hero Section */
   .hero-section {
     @apply relative py-20 px-4 sm:px-6 lg:px-8;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(249, 250, 251, 0.8) 50%, rgba(255, 255, 255, 1) 100%);
+    background: #ffffff;
   }
 
   .hero-title {
@@ -119,7 +119,7 @@
   }
 
   .skill-bar-fill {
-    @apply bg-gradient-to-r from-blue-500 to-blue-600 h-full rounded-full;
+    @apply bg-blue-600 h-full rounded-full;
     box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
     transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -130,7 +130,7 @@
   }
 
   .profile-glow {
-    @apply absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full blur-2xl opacity-20;
+    @apply absolute inset-0 bg-blue-100 rounded-full blur-2xl opacity-40;
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
@@ -141,14 +141,6 @@
 
   .profile-img:hover {
     @apply scale-105;
-  }
-
-  /* Gradient Text */
-  .gradient-text {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
   }
 
   /* Animations */
@@ -190,18 +182,18 @@
   /* Section Backgrounds */
   .section-dark {
     @apply bg-gray-50;
-    background: linear-gradient(135deg, rgba(249, 250, 251, 1) 0%, rgba(243, 244, 246, 0.6) 100%);
+    background: #f9fafb;
   }
 
   .section-light {
     @apply bg-white;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(249, 250, 251, 0.8) 100%);
+    background: #ffffff;
   }
 
   /* Dividers */
   .divider {
     @apply border-t border-gray-200;
-    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+    background: #dbeafe;
   }
 
   /* Text Utilities */
@@ -267,13 +259,13 @@
   /* Footer */
   footer {
     @apply bg-gray-900 border-t border-gray-800;
-    background: linear-gradient(180deg, rgba(17, 24, 39, 1) 0%, rgba(9, 12, 20, 1) 100%);
+    background: #111827;
   }
 
   /* CTA Section */
   .cta-section {
     @apply py-20 px-4 sm:px-6 lg:px-8;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+    background: #eff6ff;
     border: 1px solid rgba(37, 99, 235, 0.2);
     border-radius: 1rem;
   }
@@ -302,10 +294,6 @@
 @layer utilities {
   .backdrop-blur-md {
     backdrop-filter: blur(12px);
-  }
-
-  .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent;
   }
 
   .shadow-glow {
