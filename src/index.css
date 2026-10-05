@@ -129,11 +129,6 @@
     @apply relative w-80 h-80;
   }
 
-  .profile-glow {
-    @apply absolute inset-0 bg-blue-100 rounded-full blur-2xl opacity-40;
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
   .profile-img {
     @apply relative w-full h-full rounded-full object-cover border-4 border-blue-600 shadow-lg;
     transition: transform 0.3s ease;
@@ -292,9 +287,6 @@
 }
 
 @layer utilities {
-  .backdrop-blur-md {
-    backdrop-filter: blur(12px);
-  }
 
   .shadow-glow {
     box-shadow: 0 0 20px rgba(37, 99, 235, 0.15);
