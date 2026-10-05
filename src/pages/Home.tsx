@@ -1,16 +1,5 @@
 import { Card } from "@/components/ui/card";
 import profileImageAsset from "../../gpg.jpg";
-import thumbnailWorkly from "../site-thumbnails/workly-ai.jpg";
-import thumbnailCanada from "../site-thumbnails/canada-opportunity-hub.jpg";
-import thumbnailPhone from "../site-thumbnails/phone-master.jpg";
-import thumbnailCharstine from "../site-thumbnails/charstine-eco.jpg";
-import thumbnailVivian from "../site-thumbnails/vivian-sifuna.jpg";
-import thumbnailKingJesus from "../site-thumbnails/king-jesus-ministry.jpg";
-import thumbnailKingJesusAlt from "../site-thumbnails/kingjesus-ministry-alt.jpg";
-import thumbnailCharstineLuxury from "../site-thumbnails/charstine-luxury.jpg";
-import testimonialPortrait1 from "../testimonial-portrait-1.jpg";
-import testimonialPortrait2 from "../testimonial-portrait-2.jpg";
-import testimonialPortrait3 from "../testimonial-portrait-3.jpg";
 import { Mail, Phone, ExternalLink, Github, Linkedin, CheckCircle2, Zap, Brain, Globe, Code2, Database, Palette, BarChart3, Cpu, Cloud, Award, Download, LayoutTemplate, MousePointer2, Layers3, FileOutput } from "lucide-react";
 
 /**
@@ -90,14 +79,14 @@ export default function Home() {
   ];
 
   const otherWebsites = [
-    { title: "Workly AI", type: "AI tools and productivity", description: "A bright product landing page for practical AI tools.", url: "https://worklyai-taupe.vercel.app", image: thumbnailWorkly, repo: "MONEY-GENARATOR" },
-    { title: "Global Opportunity Hub", type: "Jobs and opportunities", description: "A clear, approachable platform for finding global work opportunities.", url: "https://canadaopportunityhub.vercel.app", image: thumbnailCanada, repo: "canadaopportunityhub" },
-    { title: "Phone Master", type: "Product landing page", description: "A simple welcome page for a phone and device support product.", url: "https://phone-master-seven.vercel.app", image: thumbnailPhone, repo: "Phone-Master" },
-    { title: "Charstine EcoTourist Resort", type: "Hospitality website", description: "An eco-luxury resort website with a strong visual first impression.", url: "https://charstineecotouristresort.vercel.app", image: thumbnailCharstine, repo: "Charstine" },
-    { title: "Vivian Naswa Sifuna", type: "Personal brand website", description: "A professional profile site for a public communications strategist.", url: "https://viviansifuna.vercel.app", image: thumbnailVivian, repo: "viviansifuna" },
-    { title: "King Jesus Ministry Kenya", type: "Church website", description: "A calm, information-led website for a ministry and its community.", url: "https://king-jesus-ministry-ke.vercel.app", image: thumbnailKingJesus, repo: "King-Jesus-Ministry-KE" },
-    { title: "King Jesus Ministry — alternate build", type: "Community website", description: "A second published version of the ministry website with the same core content.", url: "https://kingjesusministrykenya.vercel.app", image: thumbnailKingJesusAlt, repo: "Kingjesusministrykenya" },
-    { title: "Charstine Royal Eco-Luxury", type: "Hospitality website", description: "A second resort direction with a more dramatic, premium visual style.", url: "https://charstineecoluxury.vercel.app", image: thumbnailCharstineLuxury, repo: "charstineecoluxury" }
+    { title: "Workly AI", type: "AI tools and productivity", description: "A bright product landing page for practical AI tools.", url: "https://worklyai-taupe.vercel.app", image: "/site-thumbnails/workly-ai.jpg", repo: "MONEY-GENARATOR" },
+    { title: "Global Opportunity Hub", type: "Jobs and opportunities", description: "A clear, approachable platform for finding global work opportunities.", url: "https://canadaopportunityhub.vercel.app", image: "/site-thumbnails/canada-opportunity-hub.jpg", repo: "canadaopportunityhub" },
+    { title: "Phone Master", type: "Product landing page", description: "A simple welcome page for a phone and device support product.", url: "https://phone-master-seven.vercel.app", image: "/site-thumbnails/phone-master.jpg", repo: "Phone-Master" },
+    { title: "Charstine EcoTourist Resort", type: "Hospitality website", description: "An eco-luxury resort website with a strong visual first impression.", url: "https://charstineecotouristresort.vercel.app", image: "/site-thumbnails/charstine-eco.jpg", repo: "Charstine" },
+    { title: "Vivian Naswa Sifuna", type: "Personal brand website", description: "A professional profile site for a public communications strategist.", url: "https://viviansifuna.vercel.app", image: "/site-thumbnails/vivian-sifuna.jpg", repo: "viviansifuna" },
+    { title: "King Jesus Ministry Kenya", type: "Church website", description: "A calm, information-led website for a ministry and its community.", url: "https://king-jesus-ministry-ke.vercel.app", image: "/site-thumbnails/king-jesus-ministry.jpg", repo: "King-Jesus-Ministry-KE" },
+    { title: "King Jesus Ministry — alternate build", type: "Community website", description: "A second published version of the ministry website with the same core content.", url: "https://kingjesusministrykenya.vercel.app", image: "/site-thumbnails/kingjesus-ministry-alt.jpg", repo: "Kingjesusministrykenya" },
+    { title: "Charstine Royal Eco-Luxury", type: "Hospitality website", description: "A second resort direction with a more dramatic, premium visual style.", url: "https://charstineecoluxury.vercel.app", image: "/site-thumbnails/charstine-luxury.jpg", repo: "charstineecoluxury" }
   ];
 
   const technicalSkills = {
@@ -227,19 +216,19 @@ export default function Home() {
     {
       name: "Sarah Johnson",
       role: "Founder, technology startup",
-      photo: testimonialPortrait1,
+      photo: "/testimonial-portrait-1.jpg",
       text: "Gad listened carefully, kept the work moving, and made a complicated project much easier to manage. I always knew what was happening next."
     },
     {
       name: "Michael Chen",
       role: "Operations director",
-      photo: testimonialPortrait2,
+      photo: "/testimonial-portrait-2.jpg",
       text: "The work was thoughtful and practical. Gad asked good questions, paid attention to the small details, and delivered something our team could use."
     },
     {
       name: "Emma Rodriguez",
       role: "Executive assistant",
-      photo: testimonialPortrait3,
+      photo: "/testimonial-portrait-3.jpg",
       text: "Gad brought a calm, organised approach to a busy project. Communication was clear, deadlines were respected, and the final result felt considered."
     }
   ];
