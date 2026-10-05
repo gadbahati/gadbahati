@@ -79,6 +79,7 @@ export default function Home() {
   ];
 
   const otherWebsites = [
+    { title: "AfyaSync", type: "Health and appointments", description: "A focused sign-in experience for a health service platform.", url: "https://afyasync.vercel.app", image: "/site-thumbnails/afyasync.jpg", repo: "AFYASYNC" },
     { title: "Workly AI", type: "AI tools and productivity", description: "A bright product landing page for practical AI tools.", url: "https://worklyai-taupe.vercel.app", image: "/site-thumbnails/workly-ai.jpg", repo: "MONEY-GENARATOR" },
     { title: "Global Opportunity Hub", type: "Jobs and opportunities", description: "A clear, approachable platform for finding global work opportunities.", url: "https://canadaopportunityhub.vercel.app", image: "/site-thumbnails/canada-opportunity-hub.jpg", repo: "canadaopportunityhub" },
     { title: "Phone Master", type: "Product landing page", description: "A simple welcome page for a phone and device support product.", url: "https://phone-master-seven.vercel.app", image: "/site-thumbnails/phone-master.jpg", repo: "Phone-Master" },
